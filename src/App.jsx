@@ -21,7 +21,7 @@ function Input({ id, label, type, error, errorMsg }) {
 
   return (
     <div>
-      <div className={clsx('relative flex items-center', error ? 'text-red' : 'text-blue-dark')}>
+      <div className={clsx('relative flex items-center focus:py-0', error ? 'text-red' : 'text-blue-dark')}>
         <label
           className={clsx('absolute w-full h-full p-4 ', value !== '' && 'opacity-0')}
           htmlFor={id}
@@ -30,8 +30,8 @@ function Input({ id, label, type, error, errorMsg }) {
         </label>
         <input
           className={clsx(
-            'border  rounded w-full text-sm p-4 focus:border-2 ',
-            error ? 'border-2 border-red' : 'border-gray-200 focus:border-blue'
+            'box-border border rounded w-full text-sm px-4 py-[17px]  focus:border-2 ',
+            error ? 'border-2 border-red' : 'border-gray-200 focus:border-blue focus:py-4'
           )}
           type={type}
           name={id}
